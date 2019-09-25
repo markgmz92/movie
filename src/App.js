@@ -7,17 +7,21 @@ class App extends Component {
     console.log("This is my initalizer");
 
     const movies = [
-      { id: 0, title: "Avengers: Infinity War", overview: "Bla bla bla bla" },
-      { id: 1, title: "Avengers", overview: "bla bla bla bla" }
+      {
+        id: 0,
+        poster_src:
+          "https://image.tmdb.org/t/p/w1280/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+        title: "Avengers: Infinity War",
+        overview: "Bla bla bla bla"
+      },
+      {
+        id: 1,
+        poster_src:
+          "https://image.tmdb.org/t/p/w1280/cezWGskPY5x7GaglTTRN4Fugfb8.jpg",
+        title: "Avengers",
+        overview: "bla bla bla bla"
+      }
     ];
-
-    this.state = {
-      rows: [
-        <p key="1">This is my row 0</p>,
-        <p key="2">This is my row 1</p>,
-        <p key="3">This is my row 2</p>
-      ]
-    };
 
     var movieRows = [];
     movies.forEach(movie => {
@@ -26,7 +30,7 @@ class App extends Component {
         <table key={movie.id}>
           <tr>
             <td>
-              <img alt="" src="" />
+              <img alt="poster" width="150" src={movie.poster_src} />
             </td>
             <td>{movie.title}</td>
           </tr>

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 class App extends Component {
@@ -10,7 +9,7 @@ class App extends Component {
           <tbody>
             <tr>
               <td>
-                <img width="50" src="green_app_icon.svg" />
+                <img alt="app icon" width="50" src="green_app_icon.svg" />
               </td>
               <td width="8" />
               <td>
@@ -19,6 +18,18 @@ class App extends Component {
             </tr>
           </tbody>
         </table>
+
+        <input
+          style={{
+            fontsize: 24,
+            display: "block",
+            width: "99%",
+            paddingTop: 8,
+            paddingBottom: 8,
+            paddingLeft: 16
+          }}
+          placeholder="Enter search term"
+        />
       </div>
     );
   }
